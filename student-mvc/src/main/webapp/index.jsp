@@ -83,17 +83,17 @@ a {
 
 <form action="add" method="post">
     <div class="form-group">
-        <label for="name">Name:</label>
+        <label for="name">Name</label>
         <input type="text" id="name" name="name" required>
     </div>
 
     <div class="form-group">
-        <label for="marks">Marks:</label>
+        <label for="marks">Marks</label>
         <input type="number" id="marks" name="marks" required>
     </div>
 
     <div class="form-group">
-        <label for="age">Age:</label>
+        <label for="age">Age</label>
         <input type="number" id="age" name="age" required>
     </div>
 
