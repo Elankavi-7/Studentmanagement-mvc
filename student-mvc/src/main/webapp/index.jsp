@@ -4,39 +4,73 @@
 
 <style>
 body {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     background: #f5f6fa;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 .container {
-    margin-top: 80px;
     background: white;
-    padding: 30px;
-    width: 350px;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 30px 40px;
+    width: 400px;
     border-radius: 10px;
-    box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 input {
-    width: 90%;
     padding: 10px;
-    margin: 10px 0;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 button {
     background: #3498db;
     color: white;
-    padding: 10px 20px;
+    padding: 12px;
+    font-size: 16px;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #2980b9;
 }
 
 a {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
     text-decoration: none;
     color: #2c3e50;
+    font-weight: bold;
 }
 </style>
 
@@ -48,18 +82,24 @@ a {
 <h2>Add Student</h2>
 
 <form action="add" method="post">
-    Name:<br>
-    <input type="text" name="name"><br>
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+    </div>
 
-    Marks:<br>
-    <input type="number" name="marks"><br>
-    Age:<br>
-    <input type="number" name="age"><br>
+    <div class="form-group">
+        <label for="marks">Marks:</label>
+        <input type="number" id="marks" name="marks" required>
+    </div>
+
+    <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+    </div>
 
     <button type="submit">Save</button>
 </form>
 
-<br>
 <a href="list">View Students</a>
 
 </div>
